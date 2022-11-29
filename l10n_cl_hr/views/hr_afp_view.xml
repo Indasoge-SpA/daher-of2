@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+		<record id="hr_afp_form" model="ir.ui.view">
+			<field name="name">hr.afp.form</field>
+			<field name="model">hr.afp</field>
+			<field name="arch" type="xml">
+				<form string="AFP">
+					<sheet>
+						<div class="oe_title">
+							<label for="name" string="FONDOS DE PENSION" />
+							<h1>
+								<field name="name" />
+							</h1>
+						</div>
+						<group>
+							<group>
+								<field name="codigo" string="Codigo" />
+								<field name="codigo_afp_lre" string="Codigo LRE" />
+								<field name="rut" string="RUT" />
+							</group>
+							<group>
+								<field name="rate" invisible="1"/>
+								<field name="sis" invisible="1"/>
+								<field name="independiente" invisible="1"/>
+							</group>
+						</group>
+					</sheet>
+				</form>
+			</field>
+		</record>
+
+		<record id="hr_isapre_form" model="ir.ui.view">
+			<field name="name">hr.isapre.form</field>
+			<field name="model">hr.isapre</field>
+			<field name="arch" type="xml">
+				<form string="SALUD">
+					<sheet>
+						<div class="oe_title">
+							<label for="name" string="INSTITUCIONES DE SALUD"/>
+							<h1>
+								<field name="name"/>
+							</h1>
+						</div>
+						<group>
+							<group>
+								<field name="codigo" string="Codigo"/>
+								<field name="codigo_isapre_lre" string="Codigo LRE"/>
+								<field name="rut" string="RUT"/>
+							</group>
+						</group>
+					</sheet>
+				</form>
+			</field>
+		</record>
+
+        <record id='hr_afp_action' model='ir.actions.act_window'>
+            <field name="name">Fondos de Pensión</field>
+            <field name="res_model">hr.afp</field>
+            <field name="view_mode">tree,form</field>
+            <field name="context">{'search_default_open': 1}</field>
+            <field name="help" type="html">
+              <p class="oe_view_nocontent_create">
+                Click to create a new Pension Funds.
+              </p><p>
+                Manage all your Pension Funds.
+              </p>
+            </field>
+        </record>
+
+
+		<menuitem id="hr_afp_menu" parent="menu_cl_hr_payroll_configuration"
+			action="hr_afp_action" sequence="14" />
+	</data>
+</odoo>

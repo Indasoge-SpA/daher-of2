@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<record id="view_res_company_form" model="ir.ui.view">
+		<field name="name">Company</field>
+		<field name="model">res.company</field>
+		<field name="inherit_id" ref="base.view_company_form" />
+		<field name="arch" type="xml">
+			<field name="partner_id" position="after">
+				<field name="legal_representative_id" />
+				<field name="rut_declarante" />
+			</field>
+		</field>
+	</record>
+
+</odoo>

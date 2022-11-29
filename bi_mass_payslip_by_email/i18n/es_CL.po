@@ -1,0 +1,149 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* bi_mass_payslip_by_email
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-05-28 22:07+0000\n"
+"PO-Revision-Date: 2021-05-28 18:11-0400\n"
+"Last-Translator: Nelson Ramírez  <nramirez@konos.cl>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"Language: es\n"
+"X-Generator: Poedit 2.3\n"
+
+#. module: bi_mass_payslip_by_email
+#: model:mail.template,body_html:bi_mass_payslip_by_email.email_template_edi_hr_payroll
+msgid ""
+"\n"
+"                    <div style=\"font-family: 'Lucica Grande', Ubuntu, Arial, Verdana, sans-serif; font-size: 12px; color: rgb(34, 34, 34); background-color: #FFF; \">\n"
+"                        <p>Hello Dear ${object.employee_id.name}, </p>\n"
+"                        <p>Please Find Attachment, your ${object.name or 'n/a' } from ${object.company_id.name}.</p>\n"
+"\n"
+"                        <p>If you have any questions, do not hesitate to contact HR.</p><br/>\n"
+"                        <p>Thank you.</p>\n"
+"                        <p>HR Department.</p>\n"
+"                        <p>${object.company_id.name}</p>\n"
+"                    </div>\n"
+"                    "
+msgstr ""
+"\n"
+"                    <div style=“font-family: ‘Lucica Grande’, Ubuntu, Arial, Verdana, sans-serif; font-size: 12px; color: rgb(34, 34, 34); background-color: #FFF; “>\n"
+"                        <p>Estimad@ ${object.employee_id.name}, </p>\n"
+"                        <p>Adjunto tu ${object.name or 'n/a' } from ${object.company_id.name}.</p>\n"
+"\n"
+"                        <p>Cualquier cosa no dude en contactarnos.</p><br/>\n"
+"                        <p>Gracias.</p>\n"
+"                        <p>Recursos Humanos.</p>\n"
+"                        <p>${object.company_id.name}</p>\n"
+"                    </div>\n"
+"                    "
+
+#. module: bi_mass_payslip_by_email
+#: model:mail.template,subject:bi_mass_payslip_by_email.email_template_edi_hr_payroll
+msgid " ${object.name or 'n/a' }"
+msgstr ""
+
+#. module: bi_mass_payslip_by_email
+#: model:mail.template,report_name:bi_mass_payslip_by_email.email_template_edi_hr_payroll
+msgid "${(object.name or '').replace('/','-')}"
+msgstr ""
+
+#. module: bi_mass_payslip_by_email
+#: code:addons/bi_mass_payslip_by_email/models/employee_multiple_send_payslip.py:0
+#, python-format
+msgid "%s Employee has no email id please enter email address"
+msgstr "%s Empleado no tiene correo electrónico por favor ingréselo"
+
+#. module: bi_mass_payslip_by_email
+#: model_terms:ir.ui.view,arch_db:bi_mass_payslip_by_email.view_wizard_employee_payslip_send_mail
+msgid "<b>Do You want to send multiple payslip by email?</b>"
+msgstr "<b>¿Desea enviar varias liquidaciones por correo electrónico?</b>"
+
+#. module: bi_mass_payslip_by_email
+#: model_terms:ir.ui.view,arch_db:bi_mass_payslip_by_email.view_wizard_employee_payslip_send_mail
+#, fuzzy
+msgid "Cancel"
+msgstr "Cancelar"
+
+#. module: bi_mass_payslip_by_email
+#: model:ir.model.fields,field_description:bi_mass_payslip_by_email.field_send_multiple_mail__create_uid
+msgid "Created by"
+msgstr "Creado por"
+
+#. module: bi_mass_payslip_by_email
+#: model:ir.model.fields,field_description:bi_mass_payslip_by_email.field_send_multiple_mail__create_date
+#, fuzzy
+msgid "Created on"
+msgstr "Creado en"
+
+#. module: bi_mass_payslip_by_email
+#: model:ir.model.fields,field_description:bi_mass_payslip_by_email.field_hr_payslip__display_name
+#: model:ir.model.fields,field_description:bi_mass_payslip_by_email.field_send_multiple_mail__display_name
+msgid "Display Name"
+msgstr "Nombre mostrado"
+
+#. module: bi_mass_payslip_by_email
+#: model_terms:ir.ui.view,arch_db:bi_mass_payslip_by_email.view_wizard_employee_payslip_send_mail
+msgid "Employee Payslip Email Send"
+msgstr "Envío de Liquidaciones por Email"
+
+#. module: bi_mass_payslip_by_email
+#: model:ir.model.fields,field_description:bi_mass_payslip_by_email.field_hr_payslip__id
+#: model:ir.model.fields,field_description:bi_mass_payslip_by_email.field_send_multiple_mail__id
+msgid "ID"
+msgstr "ID (identificación)"
+
+#. module: bi_mass_payslip_by_email
+#: model:ir.model.fields,field_description:bi_mass_payslip_by_email.field_hr_payslip____last_update
+#: model:ir.model.fields,field_description:bi_mass_payslip_by_email.field_send_multiple_mail____last_update
+msgid "Last Modified on"
+msgstr "Última modificación en"
+
+#. module: bi_mass_payslip_by_email
+#: model:ir.model.fields,field_description:bi_mass_payslip_by_email.field_send_multiple_mail__write_uid
+#, fuzzy
+msgid "Last Updated by"
+msgstr "Última actualización de"
+
+#. module: bi_mass_payslip_by_email
+#: model:ir.model.fields,field_description:bi_mass_payslip_by_email.field_send_multiple_mail__write_date
+#, fuzzy
+msgid "Last Updated on"
+msgstr "Última actualización en"
+
+#. module: bi_mass_payslip_by_email
+#: model_terms:ir.ui.view,arch_db:bi_mass_payslip_by_email.view_wizard_employee_payslip_send_mail
+msgid "Or"
+msgstr "O"
+
+#. module: bi_mass_payslip_by_email
+#: model:ir.model,name:bi_mass_payslip_by_email.model_hr_payslip
+msgid "Pay Slip"
+msgstr "Nómina"
+
+#. module: bi_mass_payslip_by_email
+#: model_terms:ir.ui.view,arch_db:bi_mass_payslip_by_email.view_wizard_employee_payslip_send_mail
+#, fuzzy
+msgid "Send"
+msgstr "Enviar"
+
+#. module: bi_mass_payslip_by_email
+#: model_terms:ir.ui.view,arch_db:bi_mass_payslip_by_email.employee_send_email_button_view
+msgid "Send By Email"
+msgstr "Enviar por Email"
+
+#. module: bi_mass_payslip_by_email
+#: model:ir.model,name:bi_mass_payslip_by_email.model_send_multiple_mail
+msgid "Send Multiple Payslip"
+msgstr "Enviar liquidaciones múltiples"
+
+#. module: bi_mass_payslip_by_email
+#: model:ir.actions.act_window,name:bi_mass_payslip_by_email.action_mass_invoice
+msgid "Send Payslip By Email"
+msgstr "Enviar liquidación por Email"

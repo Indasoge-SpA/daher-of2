@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+    <record id="hr_payroll_batches_company" model="ir.rule">
+        <field name="name">Payslips batches of my Company</field>
+        <field name="model_id" ref="hr_payroll.model_hr_payslip"/>
+        <field eval="True" name="global"/>
+        <field name="domain_force">['|',('company_id','=',False),('company_id', 'in', company_ids)]</field>
+    </record>
+<!-- Reemplazamos para que solo aparezcan Empleados Activos -->
+        <record id="view_hr_payslip_by_employees" model="ir.ui.view">
+            <field name="name">hr_payroll_payslip_employees</field>
+            <field name="model">hr.payslip.employees</field>
+            <field name="arch" type="xml">
+                <form string="Payslips by Employees">
+                    <header>
+                        <button icon="fa-cogs" string="Generate" name="compute_sheet" type="object" class="oe_highlight"  />
+                    </header>
+                    <group>
+                        <span colspan="4" nolabel="1">This wizard will generate payslips for all selected employee(s) based on the dates and credit note specified on Payslips Run.</span>
+                    </group>
+                    <group colspan="4" >
+                        <separator string="Employees" colspan="4"/>
+                        <newline/>
+                        <field name="employee_ids" nolabel="1" filter_domain="[('employee_ids.contract_id.state','=','open')]"/>
+                    </group>
+               </form>
+            </field>
+        </record>
+    <!-- Payslip Line -->
+    <record id="view_hr_payslip_line_tree_inherit_1" model="ir.ui.view">
+        <field name="name">hr.payslip.line.tree.inherit</field>
+        <field name="model">hr.payslip.line</field>
+        <field name="inherit_id" ref="hr_payroll.view_hr_payslip_line_tree"/>
+        <field name="arch" type="xml">
+            <field name="rate" position="replace">
+               <field name="rate" invisible="1"/>
+            </field>
+        </field>
+    </record>
+
+    <record id="hr_payroll_view_hr_payslip_form_inherit" model="ir.ui.view">
+        <field name="name">hr_payroll_view_hr_payslip_form_inherit</field>
+        <field name="model">hr.payslip</field>
+        <field name="inherit_id" ref="hr_payroll.view_hr_payslip_form" />
+        <field name="arch" type="xml">
+            <field name="payslip_run_id" position="after">
+                <field name="isapre_cotizacion_uf"/>
+                <field name="indicadores_id" required="1"/>
+                <field name="licencias" invisible="1"/>
+                <field name="ausencias" invisible="1"/>
+                <field name="vacaciones" invisible="1"/>
+            </field>
+            <xpath expr="//field[@name='worked_days_line_ids']" position="replace">
+                <field name="worked_days_line_ids">
+                    <tree string="Worked Days" editable="bottom">
+                        <field name="name"/>
+                        <field name="code"/>
+                        <field name="number_of_days" sum="Total Working Days"/>
+                        <field name="date_from"/>
+                        <field name="date_to"/>
+                        <field name="movimientos_personal"/>
+                        <field name="work_entry_type_id"/>
+                        <field name="number_of_hours" widget="float_time" invisible="True"/>
+                        <field name="contract_id" invisible="True"/>
+                        <field name="sequence" invisible="True"/>
+                    </tree>
+                </field>
+            </xpath>
+        </field>
+    </record>
+
+    </data>
+</odoo>

@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<record model="ir.ui.view" id="hr_bonus_certificate_search_view">
+		<field name="name">Busqueda reporte sobresueldos</field>
+		<field name="model">hr.bonus.certificate</field>
+		<field name="arch" type="xml">
+			<search>
+				<field name="name" />
+				<field name="year"
+					options="{'datepicker': {'showType': 'years'}}" />
+				<field name="employee_id" />
+			</search>
+		</field>
+	</record>
+
+	<record id="view_hr_bonus_certificate_form" model="ir.ui.view">
+		<field name="name">Reporte sobresueldos</field>
+		<field name="model">hr.bonus.certificate</field>
+		<field name="arch" type="xml">
+			<form string="Reporte sobre sueldos">
+				<header>
+					<button name="run_line_detail" string="Calcular tabla"
+						type="object" class="oe_highlight" />
+				</header>
+				<sheet>
+					<div class="oe_title">
+						<span class="o_form_label">Certificado N°</span>
+						<h1>
+							<field name="name" readonly="1" />
+						</h1>
+					</div>
+					<group>
+						<group>
+							<field name="year"
+								options="{'datepicker': {'showType': 'years'}}" />
+							<field name="employee_id" />
+							<field name="company_id" groups="base.group_multi_company"
+								options="{'no_create': True}" force_save="1" />
+							<field name="currency_id" />
+							<field name="affidavit_id" />
+						</group>
+					</group>
+					<notebook>
+						<page string="tabla">
+							<field name="bonus_cert_ids" nolabel="1">
+								<tree>
+									<field name="mes" />
+									<field name="pension_bruta" />
+									<field name="cotizacion_prev" />
+									<field name="renta_imponible" />
+									<field name="impuesto_retenido" />
+									<field name="mayor_reten_imp_solicitado" />
+									<field name="renta_exenta" />
+									<field name="renta_no_gravada" />
+									<field name="rebaja_zona_extrema" />
+									<field name="fact_actualizacion" />
+									<field name="ma_renta_imponible" />
+									<field name="ma_impuesto_unico" />
+									<field name="ma__may_ret_imp_sol" />
+									<field name="ma_renta_exenta" />
+									<field name="ma_rebaja_zona_extrema" />
+									<field name="contract_hours" />
+									<field name="currency_id" visible="0" />
+								</tree>
+								<form>
+									<sheet>
+										<group>
+											<group>
+												<field name="mes" />
+												<field name="pension_bruta" />
+												<field name="cotizacion_prev" />
+												<field name="renta_imponible" />
+												<field name="impuesto_retenido" />
+												<field name="mayor_reten_imp_solicitado" />
+												<field name="renta_exenta" />
+												<field name="renta_no_gravada" />
+												<field name="rebaja_zona_extrema" />
+											</group>
+											<group>
+												<field name="fact_actualizacion" />
+												<field name="ma_renta_imponible" />
+												<field name="ma_impuesto_unico" />
+												<field name="ma__may_ret_imp_sol" />
+												<field name="ma_renta_exenta" />
+												<field name="ma_rebaja_zona_extrema" />
+												<field name="contract_hours" />
+											</group>
+										</group>
+									</sheet>
+								</form>
+							</field>
+							<group class="oe_subtotal_footer oe_right">
+								<field name="tot_pension_bruta" />
+								<field name="tot_cotizacion_prev" />
+								<field name="tot_renta_imponible" />
+								<field name="tot_impuesto_retenido" />
+								<field name="tot_mayor_reten_imp_solicitado" />
+								<field name="tot_renta_exenta" />
+								<field name="tot_renta_no_gravada" />
+								<field name="tot_rebaja_zona_extrema" />
+								<field name="tot_ma_renta_bruta" />
+								<field name="tot_ma_renta_imponible" />
+								<field name="tot_ma_impuesto_unico" />
+								<field name="tot_ma_may_ret_imp_sol" />
+								<field name="tot_ma_renta_exenta" />
+								<field name="tot_ma_renta_no_gravada" />
+								<field name="tot_ma_rebaja_zona_extrema" />
+							</group>
+						</page>
+					</notebook>
+				</sheet>
+			</form>
+		</field>
+	</record>
+
+	<record id="view_hr_bonus_certificate_tree" model="ir.ui.view">
+		<field name="name">Tabla reporte sobresueldos</field>
+		<field name="model">hr.bonus.certificate</field>
+		<field name="arch" type="xml">
+			<tree string="Correction factor">
+				<field name="name" />
+				<field name="year" />
+				<field name="employee_id" />
+				<field name="tot_pension_bruta" />
+				<field name="tot_cotizacion_prev" />
+				<field name="tot_renta_imponible" />
+				<field name="tot_impuesto_retenido" />
+				<field name="tot_mayor_reten_imp_solicitado" />
+				<field name="tot_renta_exenta" />
+				<field name="tot_renta_no_gravada" />
+				<field name="tot_rebaja_zona_extrema" />
+				<field name="tot_ma_renta_bruta" />
+				<field name="tot_ma_renta_imponible" />
+				<field name="tot_ma_impuesto_unico" />
+				<field name="tot_ma_may_ret_imp_sol" />
+				<field name="tot_ma_renta_exenta" />
+				<field name="tot_ma_renta_no_gravada" />
+				<field name="tot_ma_rebaja_zona_extrema" />
+				<field name="ene" />
+				<field name="feb" />
+				<field name="mar" />
+				<field name="abr" />
+				<field name="may" />
+				<field name="jun" />
+				<field name="jul" />
+				<field name="ago" />
+				<field name="sep" />
+				<field name="oct" />
+				<field name="nov" />
+				<field name="dic" />
+			</tree>
+		</field>
+	</record>
+
+	<record model="ir.actions.act_window"
+		id="act_hr_bonus_certificate">
+		<field name="name">Reporte sobresueldos</field>
+		<field name="type">ir.actions.act_window</field>
+		<field name="res_model">hr.bonus.certificate</field>
+		<field name="view_mode">tree,form</field>
+	</record>
+
+	<menuitem action="act_hr_bonus_certificate"
+		id="menu_action_act_hr_bonus_certificate"
+		parent="hr_payroll.menu_hr_payroll_report" sequence="40" />
+
+</odoo>

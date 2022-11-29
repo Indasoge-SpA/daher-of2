@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="hr_rule_60" model="hr.salary.rule">
+            <field name="name">SEMANA CORRIDA</field>
+            <field name="sequence" eval="8"/>
+            <field name="code">SEMC</field>
+            <field name="category_id" ref="l10n_cl_hr.IMPONIBLE"/>
+            <field name="condition_select">python</field>
+            <field name="condition_python">result = inputs.SEMC and inputs.SEMC.amount > 0</field>
+            <field name="amount_select">code</field>
+            <field name="amount_python_compute">result = inputs.SEMC.amount</field>
+            <field name="struct_id" ref="l10n_cl_hr.hr_struct_cl"/>
+        </record>
+        <record id="hr_rule_61" model="hr.salary.rule">
+            <field name="name">SUPERIORES A UN MES(2113)</field>
+            <field name="sequence" eval="8"/>
+            <field name="code">SUPMES</field>
+            <field name="category_id" ref="l10n_cl_hr.IMPONIBLE"/>
+            <field name="condition_select">python</field>
+            <field name="condition_python">result = inputs.SUPMES and inputs.SUPMES.amount > 0</field>
+            <field name="amount_select">code</field>
+            <field name="amount_python_compute">result = inputs.SUPMES.amount</field>
+            <field name="struct_id" ref="l10n_cl_hr.hr_struct_cl"/>
+        </record>
+        <record id="hr_rule_62" model="hr.salary.rule">
+            <field name="name">CREDITO SOCIAL CCAF(3110)</field>
+            <field name="sequence" eval="38"/>
+            <field name="code">CREDSC</field>
+            <field name="category_id" ref="l10n_cl_hr.ODESC"/>
+            <field name="condition_select">python</field>
+            <field name="condition_python">result = inputs.CREDSC and inputs.CREDSC.amount > 0</field>
+            <field name="amount_select">code</field>
+            <field name="amount_python_compute">result = inputs.CREDSC.amount</field>
+            <field name="struct_id" ref="l10n_cl_hr.hr_struct_cl"/>
+        </record>
+        <record id="hr_rule_64" model="hr.salary.rule">
+            <field name="name">RETENCION PRESTAMO CLASE MEDIO 2020 (3166)</field>
+            <field name="sequence" eval="38"/>
+            <field name="code">RPCM</field>
+            <field name="category_id" ref="l10n_cl_hr.ODESC"/>
+            <field name="condition_select">python</field>
+            <field name="condition_python">result = inputs.RPCM and inputs.RPCM.amount > 0</field>
+            <field name="amount_select">code</field>
+            <field name="amount_python_compute">result = inputs.RPCM.amount</field>
+            <field name="struct_id" ref="l10n_cl_hr.hr_struct_cl"/>
+        </record>
+        <record id="hr_rule_65" model="hr.salary.rule">
+            <field name="name">REBAJA ZONA EXTREMA DL 889 (3167)</field>
+            <field name="sequence" eval="38"/>
+            <field name="code">RZE</field>
+            <field name="category_id" ref="l10n_cl_hr.ODESC"/>
+            <field name="condition_select">python</field>
+            <field name="condition_python">result = inputs.RZE and inputs.RZE.amount > 0</field>
+            <field name="amount_select">code</field>
+            <field name="amount_python_compute">result = inputs.RZE.amount</field>
+            <field name="struct_id" ref="l10n_cl_hr.hr_struct_cl"/>
+        </record>
+        <record id="hr_rule_input_horas_ext_60" model="hr.payslip.input.type">
+            <field name="name">SEMANA CORRIDA</field>
+            <field name="code">SEMC</field>
+            <field name="country_id" ref="base.cl"/>
+            <field name="struct_ids" eval="[(4, ref('l10n_cl_hr.hr_struct_cl'))]"/>
+        </record>
+        <record id="hr_rule_input_horas_ext_61" model="hr.payslip.input.type">
+            <field name="name">SUPERIORES A UN MES(2113)</field>
+            <field name="code">SUPMES</field>
+            <field name="country_id" ref="base.cl"/>
+            <field name="struct_ids" eval="[(4, ref('l10n_cl_hr.hr_struct_cl'))]"/>
+        </record>
+        <record id="hr_rule_input_horas_ext_62" model="hr.payslip.input.type">
+            <field name="name">CREDITO SOCIAL CCAF(3110)</field>
+            <field name="code">CREDSC</field>
+            <field name="country_id" ref="base.cl"/>
+            <field name="struct_ids" eval="[(4, ref('l10n_cl_hr.hr_struct_cl'))]"/>
+        </record>
+        <record id="hr_rule_input_horas_ext_64" model="hr.payslip.input.type">
+            <field name="name">RETENCION PRESTAMO CLASE MEDIO 2020 (3166)</field>
+            <field name="code">RPCM</field>
+            <field name="country_id" ref="base.cl"/>
+            <field name="struct_ids" eval="[(4, ref('l10n_cl_hr.hr_struct_cl'))]"/>
+        </record>
+        <record id="hr_rule_input_horas_ext_65" model="hr.payslip.input.type">
+            <field name="name">REBAJA ZONA EXTREMA DL 889 (3167)</field>
+            <field name="code">RZE</field>
+            <field name="country_id" ref="base.cl"/>
+            <field name="struct_ids" eval="[(4, ref('l10n_cl_hr.hr_struct_cl'))]"/>
+        </record>
+    </data>
+</odoo>

@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<record model="ir.ui.view" id="hr_affidavit_search_view">
+		<field name="name">Busqueda Declaracion Jurada 1887</field>
+		<field name="model">hr.affidavit</field>
+		<field name="arch" type="xml">
+			<search>
+				<field name="year" />
+				<field name="tributary_year" />
+				<field name="company_id" />
+				<field name="currency_id" />
+			</search>
+		</field>
+	</record>
+
+	<record id="view_hr_affidavit_form" model="ir.ui.view">
+		<field name="name">Reporte Declaracion Jurada 1887</field>
+		<field name="model">hr.affidavit</field>
+		<field name="arch" type="xml">
+			<form string="Reporte sobre sueldos">
+				<header>
+					<button name="run_cert_employee"
+						string="Generar certificados y rellenar" type="object"
+						class="oe_highlight" />
+					<button name="onchage_bonus_cert_ids"
+						string="Solo actualizar totales" type="object"
+						class="oe_highlight" />
+				</header>
+				<sheet>
+					<group>
+						<group>
+							<field name="year" />
+							<field name="tributary_year"/>
+							<field name="company_id" />
+							<field name="currency_id" />
+						</group>
+						<group>
+							<field name="txt_filename" invisible="1" />
+							<field name="txt_binary" filename="txt_filename"
+								readonly="1" />
+						</group>
+					</group>
+					<notebook>
+						<page string="Certificados sobresueldos relacionados">
+							<field name="bonus_cert_ids" nolabel="1">
+								<tree>
+									<field name="vat" />
+									<field name="tot_renta_imponible" />
+									<field name="tot_impuesto_retenido" />
+									<field name="tot_mayor_reten_imp_solicitado" />
+									<field name="tot_renta_exenta" />
+									<field name="tot_renta_no_gravada" />
+									<field name="tot_rebaja_zona_extrema" />
+									<field name="tot_ma_renta_bruta" />
+									<field name="tot_ma_renta_imponible" />
+									<field name="tot_ma_impuesto_unico" />
+									<field name="tot_ma_may_ret_imp_sol" />
+									<field name="tot_ma_renta_exenta" />
+									<field name="tot_ma_renta_no_gravada" />
+									<field name="tot_ma_rebaja_zona_extrema" />
+									<field name="currency_id" visible="0" />
+									<field name="ene" />
+									<field name="feb" />
+									<field name="mar" />
+									<field name="abr" />
+									<field name="may" />
+									<field name="jun" />
+									<field name="jul" />
+									<field name="ago" />
+									<field name="sep" />
+									<field name="oct" />
+									<field name="nov" />
+									<field name="dic" />
+									<field name="name" />
+								</tree>
+								<form>
+									<sheet>
+										<group>
+											<group>
+												<field name="name" readonly="1" />
+												<field name="vat" />
+												<field name="tot_pension_bruta" />
+												<field name="tot_renta_imponible" />
+												<field name="tot_impuesto_retenido" />
+												<field name="tot_renta_exenta" />
+												<field name="tot_renta_no_gravada" />
+												<field name="tot_mayor_reten_imp_solicitado" />
+												<field name="tot_renta_exenta" />
+												<field name="tot_rebaja_zona_extrema" />
+											</group>
+											<group>
+												<field name="tot_ma_renta_bruta" />
+												<field name="tot_ma_renta_imponible" />
+												<field name="tot_ma_impuesto_unico" />
+												<field name="tot_ma_may_ret_imp_sol" />
+												<field name="tot_ma_renta_exenta" />
+												<field name="tot_ma_renta_no_gravada" />
+												<field name="tot_ma_rebaja_zona_extrema" />
+												<field name="currency_id" visible="0" />
+											</group>
+										</group>
+										<group>
+											<group>
+												<field name="ene" />
+												<field name="feb" />
+												<field name="mar" />
+												<field name="abr" />
+												<field name="may" />
+												<field name="jun" />
+												<field name="jul" />
+												<field name="ago" />
+												<field name="sep" />
+												<field name="oct" />
+												<field name="nov" />
+												<field name="dic" />
+											</group>
+										</group>
+									</sheet>
+								</form>
+							</field>
+							<group class="oe_subtotal_footer oe_right">
+								<field name="tot_pension_bruta" />
+								<field name="tot_cotizacion_prev" />
+								<field name="tot_renta_imponible" />
+								<field name="tot_impuesto_retenido" />
+								<field name="tot_mayor_reten_imp_solicitado" />
+								<field name="tot_renta_exenta" />
+								<field name="tot_renta_no_gravada" />
+								<field name="tot_rebaja_zona_extrema" />
+								<field name="tot_ma_renta_bruta" />
+								<field name="tot_ma_renta_imponible" />
+								<field name="tot_ma_impuesto_unico" />
+								<field name="tot_ma_may_ret_imp_sol" />
+								<field name="tot_ma_renta_exenta" />
+								<field name="tot_ma_renta_no_gravada" />
+								<field name="tot_ma_rebaja_zona_extrema" />
+							</group>
+						</page>
+					</notebook>
+				</sheet>
+			</form>
+		</field>
+	</record>
+
+	<record id="view_hr_affidavit_tree" model="ir.ui.view">
+		<field name="name">Tabla Declaracion jurada 1887</field>
+		<field name="model">hr.affidavit</field>
+		<field name="arch" type="xml">
+			<tree string="Correction factor">
+				<field name="year"/>
+				<field name="company_id" />
+				<field name="currency_id" />
+			</tree>
+		</field>
+	</record>
+
+	<record model="ir.actions.act_window" id="act_hr_affidavit">
+		<field name="name">Declaracion jurada 1887</field>
+		<field name="type">ir.actions.act_window</field>
+		<field name="res_model">hr.affidavit</field>
+		<field name="view_mode">tree,form</field>
+	</record>
+
+	<menuitem action="act_hr_affidavit"
+		id="menu_action_act_hr_affidavit"
+		parent="hr_payroll.menu_hr_payroll_report" sequence="40" />
+
+</odoo>

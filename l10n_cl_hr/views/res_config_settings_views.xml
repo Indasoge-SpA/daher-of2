@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+        <record id="res_config_settings_view_form" model="ir.ui.view">
+            <field name="name">res.config.settings.view.form.inherit.hr.chile</field>
+            <field name="model">res.config.settings</field>
+            <field name="priority" eval="45"/>
+            <field name="inherit_id" ref="base.res_config_settings_view_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//div[@id='hr_payroll_accountant']" position="after">
+                    <h2>Instituciones Relacionadas </h2>
+                    <div class="row mt16 o_settings_container" id="l10n_cl_hr_custom_localization" groups="hr_payroll.group_hr_payroll_manager">
+
+                        <div class="o_setting_left_pane">
+                            <group col="2" name="quotations" string="Cotizaciones">
+                                <field name="caja_compensacion"/>
+                                <field name="fonasa"/>
+                            </group>
+                        </div>
+                        <div class="o_setting_left_pane">
+                            <group col="2" name="mutual_insurance" string="Instituciones de Seguridad">
+                                <field name="pensiones_ips"/>
+                                <field name="tope_imponible_salud"/>
+                                <field name="isl"/>
+                            </group>
+                      </div>
+                    </div>
+                </xpath>
+            </field>
+        </record>
+</odoo>

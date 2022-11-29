@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<!-- Main Payroll Menu -->
+	<menuitem id="menu_cl_hr_payroll_addons"
+		name="Payroll Addons" parent="hr_work_entry_contract_enterprise.menu_hr_payroll_configuration"
+		sequence="3" />
+
+	<menuitem id="menu_cl_hr_payroll_indicators" name="Previred"
+		parent="hr_work_entry_contract_enterprise.menu_hr_payroll_configuration" sequence="70"
+		groups="hr_payroll.group_hr_payroll_user" />
+
+	<menuitem id="menu_cl_hr_payroll_configuration"
+		name="Chilean Configuration"
+		parent="hr_work_entry_contract_enterprise.menu_hr_payroll_configuration" sequence="101"
+		groups="hr_payroll.group_hr_payroll_user" />
+
+</odoo>

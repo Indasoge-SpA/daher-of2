@@ -1,0 +1,261 @@
+<?xml version="1.0"?>
+<odoo>
+	<template id="hr_affidavit_report">
+		<t t-call="web.html_container">
+			<t t-foreach="docs" t-as="o">
+				<t t-call="web.internal_layout">
+					<div class="page small">
+						<style>
+							p{
+							margin-top: 15px;
+							}
+						</style>
+						<div class="row">
+							<div class="col-12 text-right">
+								<span t-esc="o.company_id.city" />
+								<span
+									t-esc="datetime.datetime.now().strftime('a %d días del mes %-m, del año %Y')" />
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-2">
+								<span>Empleador, habilitado o pagador</span>
+							</div>
+							<div class="col-10">
+								<span t-esc="o.company_id.name" />
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-2">
+								<span>RUT No</span>
+							</div>
+							<div class="col-10">
+								<span t-esc="o.company_id.company_registry" />
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-2">
+								<span>Dirección</span>
+							</div>
+							<div class="col-10">
+								<span t-esc="o.company_id.street" />
+								<span t-esc="o.company_id.street2" />
+								<span
+									t-esc="o.company_id.city and o.company_id.city.capitalize() or ''" />
+								<span t-esc="o.company_id.country_id.name" />
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-2">
+								<span>Giro o actividad</span>
+							</div>
+							<div class="col-10">
+								<span t-esc="o.company_id.giro" />
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-12">
+								<h3>
+									<center>
+										DECLARACION JURADA SOBRE RENTAS DEL ART. 42 No 1 Y RETENCIONES
+										DEL IMPUESTO UNICO DE LA LEY DE LA RENTA FORMULARIO 1887
+										<br />
+										AÑO TRIBUTARIO
+										<span t-esc="o.tributary_year.strftime('%Y')"/>
+									</center>
+								</h3>
+							</div>
+						</div>
+						<table class="table table-bordered table-sm">
+							<tr>
+								<th rowspan="2">
+									RUT persona quien se pago renta, trab
+									pens
+								</th>
+								<th colspan="6">
+									<center>Montos anuales sin actualizar</center>
+								</th>
+								<th colspan="6">
+									<center>Montos anuales actualizados</center>
+								</th>
+								<th colspan="12">
+									<center>Periodo al cual corresponden las rentas</center>
+								</th>
+								<th rowspan="2">
+									<center>Cert no</center>
+								</th>
+							</tr>
+							<tr>
+								<th class="amount-sm">Renta Neta A 42 N1</th>
+								<th class="amount-sm">I Uni. Ret.</th>
+								<th class="amount-sm">M. Ret. Solic.</th>
+								<th class="amount-sm">Rta. Exenta</th>
+								<th class="amount-sm">Rta. No Gravada</th>
+								<th class="amount-sm">Rebaja zona</th>
+								<th class="amount-sm">Renta Neta A 42 N1</th>
+								<th class="amount-sm">I Uni. Ret.</th>
+								<th class="amount-sm">M. Ret. Solic.</th>
+								<th class="amount-sm">Rta. Exenta</th>
+								<th class="amount-sm">Rta. No Gravada</th>
+								<th class="amount-sm">Rebaja zona</th>
+								<th class="amount-sm">E</th>
+								<th class="amount-sm">F</th>
+								<th class="amount-sm">M</th>
+								<th class="amount-sm">A</th>
+								<th class="amount-sm">M</th>
+								<th class="amount-sm">J</th>
+								<th class="amount-sm">J</th>
+								<th class="amount-sm">A</th>
+								<th class="amount-sm">S</th>
+								<th class="amount-sm">O</th>
+								<th class="amount-sm">N</th>
+								<th class="amount-sm">D</th>
+							</tr>
+							<tr t-foreach="o.bonus_cert_ids" t-as="l">
+								<td>
+									<span style="width: 90px;" t-esc="l.vat" />
+								</td>
+								<td>
+									<span t-field="l.tot_renta_imponible" />
+								</td>
+								<td>
+									<span t-field="l.tot_impuesto_retenido" />
+								</td>
+								<td>
+									<span t-field="l.tot_mayor_reten_imp_solicitado" />
+								</td>
+								<td>
+									<span t-field="l.tot_renta_exenta" />
+								</td>
+								<td>
+									<span t-field="l.tot_renta_no_gravada" />
+								</td>
+								<td>
+									<span t-field="l.tot_rebaja_zona_extrema" />
+								</td>
+								<td>
+									<span t-field="l.tot_ma_renta_imponible" />
+								</td>
+								<td>
+									<span t-field="l.tot_ma_impuesto_unico" />
+								</td>
+								<td>
+									<span t-field="l.tot_ma_may_ret_imp_sol" />
+								</td>
+								<td>
+									<span t-field="l.tot_ma_renta_exenta" />
+								</td>
+								<td>
+									<span t-field="l.tot_ma_renta_no_gravada" />
+								</td>
+								<td>
+									<span t-field="l.tot_ma_rebaja_zona_extrema" />
+								</td>
+								<td>
+									<span t-field="l.ene" />
+								</td>
+								<td>
+									<span t-field="l.feb" />
+								</td>
+								<td>
+									<span t-field="l.mar" />
+								</td>
+								<td>
+									<span t-field="l.abr" />
+								</td>
+								<td>
+									<span t-field="l.may" />
+								</td>
+								<td>
+									<span t-field="l.jun" />
+								</td>
+								<td>
+									<span t-field="l.jul" />
+								</td>
+								<td>
+									<span t-field="l.ago" />
+								</td>
+								<td>
+									<span t-field="l.sep" />
+								</td>
+								<td>
+									<span t-field="l.oct" />
+								</td>
+								<td>
+									<span t-field="l.nov" />
+								</td>
+								<td>
+									<span t-field="l.dic" />
+								</td>
+								<td>
+									<span t-field="l.name" />
+								</td>
+							</tr>
+							<tr>
+								<td><strong>Totales</strong></td>
+								<td>
+									<strong t-field="o.tot_renta_imponible" />
+								</td>
+								<td>
+									<strong t-field="o.tot_impuesto_retenido" />
+								</td>
+								<td>
+									<strong t-field="o.tot_mayor_reten_imp_solicitado" />
+								</td>
+								<td>
+									<strong t-field="o.tot_renta_exenta" />
+								</td>
+								<td>
+									<strong t-field="o.tot_renta_no_gravada" />
+								</td>
+								<td>
+									<strong t-field="o.tot_rebaja_zona_extrema" />
+								</td>
+								<td>
+									<strong t-field="o.tot_ma_renta_imponible" />
+								</td>
+								<td>
+									<strong t-field="o.tot_ma_impuesto_unico" />
+								</td>
+								<td>
+									<strong t-field="o.tot_ma_may_ret_imp_sol" />
+								</td>
+								<td>
+									<strong t-field="o.tot_ma_renta_exenta" />
+								</td>
+								<td>
+									<strong t-field="o.tot_ma_renta_no_gravada" />
+								</td>
+								<td>
+									<strong t-field="o.tot_ma_rebaja_zona_extrema" />
+								</td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td></td>
+							</tr>
+						</table>
+					</div>
+				</t>
+			</t>
+		</t>
+	</template>
+
+
+	<report id="hr_affidavit_report_repo"
+		string="Reporte declaraciones juradas" model="hr.affidavit"
+		report_type="qweb-html"
+		file="l10n_cl_hr_reports.hr_affidavit_report"
+		name="l10n_cl_hr_reports.hr_affidavit_report"
+		paperformat="l10n_cl_hr.report_paper_format_payroll"/>
+
+</odoo>

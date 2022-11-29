@@ -1,0 +1,6 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_hr_bonus_certificate,access_hr_bonus_certificate,model_hr_bonus_certificate,,1,1,1,1
+access_hr_bonus_certificate_line,access_hr_bonus_certificate_line,model_hr_bonus_certificate_line,,1,1,1,1
+access_hr_affidavit,access_hr_affidavit,model_hr_affidavit,base.group_user,1,1,1,1
+access_sworn_declaration_report_user,hr.sworn.declaration.report,model_hr_sworn_declaration_report,base.group_user,1,1,1,1
+access_export_excel_user,export.excel,model_export_excel,base.group_user,1,1,1,1

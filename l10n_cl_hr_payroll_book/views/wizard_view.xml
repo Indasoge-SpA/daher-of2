@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record model='ir.ui.view' id='wizard_form'>
+            <field name="name">hr.payroll.book.form</field>
+            <field name="model">hr.payroll.book</field>
+            <field name="arch" type="xml">
+                <form string="Wizard">
+                    <group colspan="2">
+                      <field name="date_from"/>
+                      <field name="date_to"/>
+                    </group>
+                    <footer>
+                      <button name="export_xls" type="object"
+                            string="Payroll Book" class="oe_highlight"
+                            icon="fa-download"/>
+                      <button string="Cancel" class="oe_link" special="cancel" />
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <record model='ir.actions.act_window' id='wizard_act'>
+            <field name="name">Payroll Book</field>
+            <field name="res_model">hr.payroll.book</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="wizard_form"/>
+            <field name="target">new</field>
+        </record>
+
+        <record id="view_export_excel" model="ir.ui.view">
+            <field name="name">export.book.excel.form</field>
+            <field name="model">export.book.excel</field>
+            <field name="arch" type="xml">
+                <form string="Excel Report file" version="7.0">
+                    <group>
+                        <field name="excel_file" readonly="1" filename="file_name"/>
+                        <field name="file_name" invisible="1"/>
+                    </group>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="action_export_excel_view">
+            <field name="name">Export Excel</field>
+            <field name="res_model">export.book.excel</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="wizard_form"/>
+            <field name="target">new</field>
+        </record>
+
+        <menuitem name="Payroll Book"
+                  parent="hr_payroll.menu_hr_payroll_report"
+                  id="export_excel"
+                  action="wizard_act"
+                  sequence="2"/>
+
+    </data>
+</odoo>

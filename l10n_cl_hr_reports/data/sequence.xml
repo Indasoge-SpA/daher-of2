@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo noupdate="1">
+	<!--form unique sequence -->
+	<record id="hr_bonus_certificate_view" model="ir.sequence">
+		<field name="name">bonus certificate sequence</field>
+		<field name="code">hr.bonus.certificate</field>
+		<field name="prefix"></field>
+		<field name="padding">0</field>
+		<field name="implementation">no_gap</field>
+	</record>
+</odoo>

@@ -1,0 +1,308 @@
+<?xml version="1.0"?>
+<odoo>
+	<template id="hr_bonus_certificate_report">
+		<t t-call="web.html_container">
+			<t t-foreach="docs" t-as="o">
+				<t t-call="web.internal_layout">
+					<div class="page small">
+						<style>
+							p{
+							margin-top: 15px;
+							}
+						</style>
+						<div class="row">
+							<div class="col-12 text-right">
+								Certificado N°
+								<span t-esc="o.name" />
+							</div>
+							<div class="col-12 text-right">
+								<span t-esc="o.company_id.city" />
+								<span
+									t-esc="datetime.datetime.now().strftime('a %d días del mes %-m, del año %Y')" />
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-2">
+								Empleador, habilitado o pagador
+							</div>
+							<div class="col-10">
+								<span t-esc="o.company_id.name" />
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-2">
+								<span>RUT No</span>
+							</div>
+							<div class="col-10">
+								<span t-esc="o.company_id.company_registry" />
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-2">
+								<span>Dirección</span>
+							</div>
+							<div class="col-10">
+								<span t-esc="o.company_id.street" />
+								<span t-esc="o.company_id.street2" />
+								<span
+									t-esc="o.company_id.city and o.company_id.city.capitalize() or ''" />
+								<span t-esc="o.company_id.country_id.name" />
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-2">
+								<span>Giro o actividad</span>
+							</div>
+							<div class="col-10">
+								<span t-esc="o.company_id.giro" />
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-12">
+								<h3>CERTIFICADO N° 6 SOBRE SUELDOS Y OTRAS RENTAS SIMILARES.
+								</h3>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-12">
+								<p>
+									El empleador,
+									<span t-esc="o.company_id.name" />
+									, certifica que
+									<t t-if="o.employee_id.gender=='female'">a la</t>
+									<t t-else="">al </t>
+									<t t-if="o.employee_id.address_home_id">
+										<span t-esc="o.employee_id.address_home_id.title.name" />
+									</t>
+									<t t-else="">Sr. </t>
+									<span t-esc="o.employee_id.name" />
+									RUT N°
+									<span t-esc="o.employee_id.identification_id" />
+									,
+									en su calidad de empleado dependiente, durante el año
+									<span t-field="o.year" t-field-options='{"format": "y"}' />
+									,
+									se le han pagado las rentas que se le indican y sobre las
+									cuales
+									se le practicaron las retenciones de impuestos que se
+									señalan:
+								</p>
+							</div>
+						</div>
+						<table class="table table-bordered table-sm">
+							<tr>
+								<th rowspan="2">
+									Mes
+								</th>
+								<th rowspan="2">
+									Sueldo jubil. o pension bruta
+								</th>
+								<th rowspan="2">
+									Cotiz. prev. de cargo del Trab. o pensionado
+								</th>
+								<th rowspan="2">
+									Renta imp. o afecto al impto. de 2da Categ.
+								</th>
+								<th rowspan="2">
+									Impto único retenido
+								</th>
+								<th rowspan="2">
+									Mayor ret. impto solic.
+								</th>
+								<th rowspan="2">
+									Renta exenta
+								</th>
+								<th rowspan="2">
+									Renta no gravada
+								</th>
+								<th rowspan="2">
+									Rebaja zona extrema
+								</th>
+								<th rowspan="2">
+									Fact. de act.
+								</th>
+								<th colspan="6">
+									<center>Montos actualizados</center>
+								</th>
+							</tr>
+							<tr>
+								<th>
+									Renta af. I. único 2da categoría
+								</th>
+								<th>
+									Impuesto único retenido
+								</th>
+								<th>
+									May. ret. impuesto único solic.
+								</th>
+								<th>
+									Renta exenta
+								</th>
+								<th>
+									Renta no gravada
+								</th>
+								<th>
+									Rebaja zona extrema
+								</th>
+							</tr>
+							<tr>
+								<th></th>
+								<th>(2)</th>
+								<th>(3)</th>
+								<th>(4)</th>
+								<th>(5)</th>
+								<th>(6)</th>
+								<th>(7)</th>
+								<th>(8)</th>
+								<th>(9)</th>
+								<th>(10)</th>
+								<th>(4*10=11)</th>
+								<th>(5*10=12)</th>
+								<th>(6*10=13)</th>
+								<th>(7*10=14)</th>
+								<th>(8*10=15)</th>
+								<th>(8*10=16)</th>
+							</tr>
+							<tr t-foreach="o.bonus_cert_ids" t-as="l">
+								<td>
+									<span t-esc="l.mes[:3]" />
+								</td>
+								<td>
+									<span t-field="l.pension_bruta" />
+								</td>
+								<td>
+									<span t-field="l.cotizacion_prev" />
+								</td>
+								<td>
+									<span t-field="l.renta_imponible" />
+								</td>
+								<td>
+									<span t-field="l.impuesto_retenido" />
+								</td>
+								<td>
+									<span t-field="l.mayor_reten_imp_solicitado" />
+								</td>
+								<td>
+									<span t-field="l.renta_exenta" />
+								</td>
+								<td>
+									<span t-field="l.renta_no_gravada" />
+								</td>
+								<td>
+									<span t-field="l.rebaja_zona_extrema" />
+								</td>
+								<td>
+									<span t-field="l.fact_actualizacion" />
+								</td>
+								<td>
+									<span t-field="l.ma_renta_imponible" />
+								</td>
+								<td>
+									<span t-field="l.ma_impuesto_unico" />
+								</td>
+								<td>
+									<span t-field="l.ma__may_ret_imp_sol" />
+								</td>
+								<td>
+									<span t-field="l.ma_renta_exenta" />
+								</td>
+								<td>
+									<span t-field="l.ma_renta_no_gravada" />
+								</td>
+								<td>
+									<span t-field="l.ma_rebaja_zona_extrema" />
+								</td>
+							</tr>
+							<tr>
+								<td>Total</td>
+								<td>
+									<span t-field="o.tot_pension_bruta" />
+								</td>
+								<td>
+									<span t-field="o.tot_cotizacion_prev" />
+								</td>
+								<td>
+									<span t-field="o.tot_renta_imponible" />
+								</td>
+								<td>
+									<span t-field="o.tot_impuesto_retenido" />
+								</td>
+								<td>
+									<span t-field="o.tot_mayor_reten_imp_solicitado" />
+								</td>
+								<td>
+									<span t-field="o.tot_renta_exenta" />
+								</td>
+								<td>
+									<span t-field="o.tot_renta_no_gravada" />
+								</td>
+								<td>
+									<span t-field="o.tot_rebaja_zona_extrema" />
+								</td>
+								<td></td>
+								<td>
+									<span t-field="o.tot_ma_renta_imponible" />
+								</td>
+								<td>
+									<span t-field="o.tot_ma_impuesto_unico" />
+								</td>
+								<td>
+									<span t-field="o.tot_ma_may_ret_imp_sol" />
+								</td>
+								<td>
+									<span t-field="o.tot_ma_renta_exenta" />
+								</td>
+								<td>
+									<span t-field="o.tot_ma_renta_no_gravada" />
+								</td>
+								<td>
+									<span t-field="o.tot_ma_rebaja_zona_extrema" />
+								</td>
+							</tr>
+						</table>
+						<div class="row">
+							<div class="col-12">
+								<p>
+									Se extiende el presente Certificado en cumplimiento de lo
+									dispuesto en la Resolucion Ex. N°6509
+									del Servicio de Impuestos
+									Internos, publicada en el Diario Oficial
+									en el mes de Diciembre
+									de 1993
+								</p>
+							</div>
+						</div>
+						<br />
+						<div class="row">
+							<div class="col-12 text-center">
+								_________________________________________________
+								<t t-if="o.company_id.legal_representative_id">
+									<br/>
+									<span
+										t-esc="o.company_id.legal_representative_id.name.title()" />
+									<br/>
+									<strong>Representante Legal</strong>
+									<br/>
+									RUT
+									<span
+										t-esc="o.company_id.legal_representative_id.vat.upper().replace('CL','')[0:-1] + '-' + o.company_id.legal_representative_id.vat[-1:]" />
+								</t>
+							</div>
+						</div>
+					</div>
+				</t>
+			</t>
+		</t>
+	</template>
+
+
+	<report id="bonus_certificate_report"
+		string="Reporte de sobre Sueldos" model="hr.bonus.certificate"
+		report_type="qweb-html"
+		file="l10n_cl_hr_reports.hr_bonus_certificate_report"
+		name="l10n_cl_hr_reports.hr_bonus_certificate_report"
+		paperformat="l10n_cl_hr.report_paper_format_payroll"/>
+
+
+
+</odoo>

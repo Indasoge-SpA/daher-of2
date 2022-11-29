@@ -1,0 +1,161 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* l10n_cl_hr_leave_req_report
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0+e-20210226\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-04-10 20:45+0000\n"
+"PO-Revision-Date: 2021-04-10 20:45+0000\n"
+"Last-Translator: Victor Landaeta <vlandaeta@konos.cl>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: l10n_cl_hr_leave_req_report
+#: model_terms:ir.ui.view,arch_db:l10n_cl_hr_leave_req_report.report_leave_request_report_doc
+msgid ""
+"<br/>\n"
+"\t\t\t\t\t\t<strong>Department:</strong><br/>"
+msgstr ""
+"<br/>\n"
+"\t\t\t\t\t\t<strong>Gerencia:</strong><br/>"
+
+#. module: l10n_cl_hr_leave_req_report
+#: model_terms:ir.ui.view,arch_db:l10n_cl_hr_leave_req_report.report_leave_request_report_doc
+msgid ""
+"<br/>\n"
+"\t\t\t\t\t\t<strong>Job Position:</strong><br/>"
+msgstr ""
+"<br/>\n"
+"\t\t\t\t\t\t<strong>Cargo:</strong><br/>"
+
+#. module: l10n_cl_hr_leave_req_report
+#: model_terms:ir.ui.view,arch_db:l10n_cl_hr_leave_req_report.report_leave_request_report_doc
+msgid ""
+"<br/>\n"
+"\t\t\t\t\t\t<strong>Observations:</strong><br/>"
+msgstr ""
+"<br/>\n"
+"\t\t\t\t\t\t<strong>Observaciones:</strong><br/>"
+
+#. module: l10n_cl_hr_leave_req_report
+#: model_terms:ir.ui.view,arch_db:l10n_cl_hr_leave_req_report.report_leave_request_report_doc
+msgid "<strong style=\"margin-right: 1.0em;\">Available Period:</strong>"
+msgstr "<strong style=\"margin-right: 1.0em;\">Período Disponible:</strong>"
+
+#. module: l10n_cl_hr_leave_req_report
+#: model_terms:ir.ui.view,arch_db:l10n_cl_hr_leave_req_report.report_leave_request_report_doc
+msgid "<strong style=\"margin-right: 1.0em;\">Days Number:</strong>"
+msgstr "<strong style=\"margin-right: 1.0em;\">Número de Días:</strong>"
+
+#. module: l10n_cl_hr_leave_req_report
+#: model_terms:ir.ui.view,arch_db:l10n_cl_hr_leave_req_report.report_leave_request_report_doc
+msgid "<strong style=\"margin-right: 1.0em;\">Since:</strong>"
+msgstr "<strong style=\"margin-right: 1.0em;\">Desde:</strong>"
+
+#. module: l10n_cl_hr_leave_req_report
+#: model_terms:ir.ui.view,arch_db:l10n_cl_hr_leave_req_report.report_leave_request_report_doc
+msgid "<strong style=\"margin-right: 1.0em;\">To:</strong>"
+msgstr "<strong style=\"margin-right: 1.0em;\">Hasta:</strong>"
+
+#. module: l10n_cl_hr_leave_req_report
+#: model_terms:ir.ui.view,arch_db:l10n_cl_hr_leave_req_report.report_leave_request_report_doc
+msgid "<strong style=\"margin-right: 2.5em;\">Days Number:</strong>"
+msgstr "<strong style=\"margin-right: 2.5em;\">Número de Días:</strong>"
+
+#. module: l10n_cl_hr_leave_req_report
+#: model_terms:ir.ui.view,arch_db:l10n_cl_hr_leave_req_report.report_leave_request_report_doc
+msgid "<strong style=\"margin-right: 2.5em;\">Leave Request:</strong>"
+msgstr "<strong style=\"margin-right: 2.5em;\">Tipo de Ausencia:</strong>"
+
+#. module: l10n_cl_hr_leave_req_report
+#: model_terms:ir.ui.view,arch_db:l10n_cl_hr_leave_req_report.report_leave_request_report_doc
+msgid "<strong style=\"margin-right: 2.5em;\">Since:</strong>"
+msgstr "<strong style=\"margin-right: 2.5em;\">Desde:</strong>"
+
+#. module: l10n_cl_hr_leave_req_report
+#: model_terms:ir.ui.view,arch_db:l10n_cl_hr_leave_req_report.report_leave_request_report_doc
+msgid "<strong style=\"margin-right: 2.5em;\">To:</strong>"
+msgstr "<strong style=\"margin-right: 2.5em;\">Hasta:</strong>"
+
+#. module: l10n_cl_hr_leave_req_report
+#: model_terms:ir.ui.view,arch_db:l10n_cl_hr_leave_req_report.report_leave_request_report_doc
+msgid "<strong><span>Comment by Manager :</span><br/><br/> </strong>"
+msgstr "<strong><span>Comentario del Responsable :</span><br/><br/> </strong>"
+
+#. module: l10n_cl_hr_leave_req_report
+#: model_terms:ir.ui.view,arch_db:l10n_cl_hr_leave_req_report.report_leave_request_report_doc
+msgid "<strong>Complete Day:</strong>"
+msgstr "<strong>Día Completo:</strong>"
+
+#. module: l10n_cl_hr_leave_req_report
+#: model_terms:ir.ui.view,arch_db:l10n_cl_hr_leave_req_report.report_leave_request_report_doc
+msgid "<strong>Date:</strong>"
+msgstr "<strong>Fecha</strong>"
+
+#. module: l10n_cl_hr_leave_req_report
+#: model_terms:ir.ui.view,arch_db:l10n_cl_hr_leave_req_report.report_leave_request_report_doc
+msgid "<strong>Employee ID:</strong><br/>"
+msgstr "<strong>RUT Colaborador:</strong><br/>"
+
+#. module: l10n_cl_hr_leave_req_report
+#: model_terms:ir.ui.view,arch_db:l10n_cl_hr_leave_req_report.report_leave_request_report_doc
+msgid "<strong>Employee:</strong><br/>"
+msgstr "<strong>Colaborador:</strong><br/>"
+
+#. module: l10n_cl_hr_leave_req_report
+#: model_terms:ir.ui.view,arch_db:l10n_cl_hr_leave_req_report.report_leave_request_report_doc
+msgid "<strong>Status:</strong>"
+msgstr "<strong>Estado</strong>"
+
+#. module: l10n_cl_hr_leave_req_report
+#: model_terms:ir.ui.view,arch_db:l10n_cl_hr_leave_req_report.report_leave_request_report_doc
+msgid "<strong>Vacations:</strong>"
+msgstr "<strong>Vacaciones:</strong>"
+
+#. module: l10n_cl_hr_leave_req_report
+#: model_terms:ir.ui.view,arch_db:l10n_cl_hr_leave_req_report.report_leave_request_report_doc
+msgid ""
+"ADDITIONAL VACATIONS\n"
+"\t\t\t\t\t\t\t\t<br/>"
+msgstr ""
+"VACACIONES ADICIONALES\n"
+"\t\t\t\t\t\t\t\t<br/>"
+
+#. module: l10n_cl_hr_leave_req_report
+#: model_terms:ir.ui.view,arch_db:l10n_cl_hr_leave_req_report.report_leave_request_report_doc
+msgid "Holiday Request"
+msgstr "SOLICITUD DE FERIADO LEGAL / DIAS DE PERMISO"
+
+#. module: l10n_cl_hr_leave_req_report
+#: model_terms:ir.ui.view,arch_db:l10n_cl_hr_leave_req_report.report_leave_request_report_doc
+msgid ""
+"LEGAL HOLIDAY REQUESTED / PERMISSION DAYS\n"
+"\t\t\t\t\t\t\t\t<br/>"
+msgstr ""
+"SOLICITUD DE FERIADO LEGAL / DIAS DE PERMISO\n"
+"\t\t\t\t\t\t\t\t<br/>"
+
+#. module: l10n_cl_hr_leave_req_report
+#: model:ir.actions.report,name:l10n_cl_hr_leave_req_report.report_action_leave_request_report
+msgid "Leave Request"
+msgstr "Petición de ausencia"
+
+#. module: l10n_cl_hr_leave_req_report
+#: model_terms:ir.ui.view,arch_db:l10n_cl_hr_leave_req_report.report_leave_request_report_doc
+msgid "Legal Leave Voucher"
+msgstr "SOLICITUD DE FERIADO LEGAL / DIAS DE PERMISO"
+
+#. module: l10n_cl_hr_leave_req_report
+#: model_terms:ir.ui.view,arch_db:l10n_cl_hr_leave_req_report.report_leave_request_report_doc
+msgid "Manager :"
+msgstr "Responsable:"
+
+#. module: l10n_cl_hr_leave_req_report
+#: model_terms:ir.ui.view,arch_db:l10n_cl_hr_leave_req_report.report_leave_request_report_doc
+msgid "Signature : _______________"
+msgstr "Firma : _______________"

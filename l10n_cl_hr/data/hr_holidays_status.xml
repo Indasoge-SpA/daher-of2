@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+     <!-- Holiday Tipe -->
+     <!-- Is Continued for Weekend count -->
+
+     <!-- renamed -->
+
+         <!-- Work Entry Type -->
+         <record id="hr_work_entry_type_apsent" model="hr.work.entry.type">
+             <field name="name">Ausentismo</field>
+             <field name="color">0</field>
+             <field name="code">Ausentismo</field>
+             <field name="is_leave" eval="True"/>
+
+         </record>
+
+         <record id="hr_work_entry_type_licence" model="hr.work.entry.type">
+             <field name="name">Licencia</field>
+             <field name="color">0</field>
+             <field name="code">Licencia</field>
+             <field name="is_leave" eval="True"/>
+             <field name="round_days">HALF</field>
+             <field name="round_days_type">HALF-UP</field>
+
+         </record>
+
+        <record id="holiday_status_sl" model="hr.leave.type">
+            <field name="name">Licencia</field>
+            <field name="is_continued">True</field>
+            <field name="unpaid">True</field>
+            <field name="movimientos_personal">3</field>
+            <field name="work_entry_type_id" ref="hr_work_entry_type_licence"></field>
+        </record>
+
+        <record id="holiday_status_cl" model="hr.leave.type">
+            <field name="name">Permiso con Goce de Sueldo</field>
+            <field name="is_continued">True</field>
+            <field name="unpaid">False</field>
+        </record>
+
+        <record id="holiday_status_unpaid" model="hr.leave.type">
+            <field name="name">Ausentismo</field>
+            <field name="is_continued">True</field>
+            <field name="unpaid">True</field>
+            <field name="movimientos_personal">11</field>
+            <field name="work_entry_type_id" ref="hr_work_entry_type_apsent"></field>
+        </record>
+
+        <!-- oldones -->
+        <record id="hr_holidays_status_licencia" model="hr.leave.type">
+            <field name="name">Licencia</field>
+            <field name="active">False</field>
+        </record>
+
+        <record id="hr_holidays_sin_pago" model="hr.leave.type">
+            <field name="name">Ausentismo</field>
+            <field name="active">False</field>
+        </record>
+
+        <!-- newones -->
+
+        <record id="hr_holidays_permission" model="hr.leave.type">
+            <field name="name">Permiso sin Goce de Sueldo</field>
+            <field name="is_continued">True</field>
+            <field name="unpaid">True</field>
+        </record>
+
+        <record id="hr_holidays_vacations" model="hr.leave.type">
+            <field name="name">Vacaciones</field>
+            <field name="unpaid">False</field>
+            <field name="work_entry_type_id" ref="hr_work_entry_contract.work_entry_type_legal_leave">
+            </field>
+        </record>
+
+         <record id="hr_holidays_progressive_vacations" model="hr.leave.type">
+            <field name="name">Vacaciones (Progresivas)</field>
+            <field name="unpaid">False</field>
+        </record>
+
+    </data>
+</odoo>

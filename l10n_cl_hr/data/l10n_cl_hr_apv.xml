@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>						
+<odoo>						
+    <data>						
+        <!-- Institución Autorizada APV - APVC : Cias Seguros de Vida -->
+
+        <record id="hr_apv_cuprum" model="hr.apv">
+            <field name="codigo">003</field>
+            <field name="name">CUPRUM</field>
+        </record>
+
+        <record id="hr_apv_habitat" model="hr.apv">
+            <field name="codigo">005</field>
+            <field name="name">HABITAT</field>
+        </record>
+
+        <record id="hr_apv_provida" model="hr.apv">
+            <field name="codigo">008</field>
+            <field name="name">PROVIDA</field>
+        </record>
+
+        <record id="hr_apv_planvital" model="hr.apv">
+            <field name="codigo">029</field>
+            <field name="name">PLANVITAL</field>
+        </record>
+
+        <record id="hr_apv_capital" model="hr.apv">
+            <field name="codigo">033</field>
+            <field name="name">CAPITAL</field>
+        </record>
+
+        <record id="hr_apv_modelo" model="hr.apv">
+            <field name="codigo">034</field>
+            <field name="name">MODELO</field>
+        </record>
+
+        <record id="hr_apv_abn" model="hr.apv">
+            <field name="codigo">100</field>
+            <field name="name">ABN AMRO (CHILE) SEGUROS DE VIDA S.A</field>
+        </record>
+
+        <record id="hr_apv_agf" model="hr.apv">
+            <field name="codigo">101</field>
+            <field name="name">AGF ALLIANZ CHILE COMPAÑIA DE SEGUROS VIDA S.A</field>
+        </record>
+
+        <record id="hr_apv_santander" model="hr.apv">
+            <field name="codigo">102</field>
+            <field name="name">SANTANDER SEGUROS DE VIDA S.A.</field>
+        </record>
+
+        <record id="hr_apv_bci" model="hr.apv">
+            <field name="codigo">103</field>
+            <field name="name">BCI SEGUROS VIDA S.A.</field>
+        </record>
+
+        <record id="hr_apv_banchile" model="hr.apv">
+            <field name="codigo">104</field>
+            <field name="name">BANCHILE SEGUROS DE VIDA S.A.</field>
+        </record>
+
+        <record id="hr_apv_bbva" model="hr.apv">
+            <field name="codigo">105</field>
+            <field name="name">BBVA SEGUROS DE VIDA S.A.</field>
+        </record>
+
+        <record id="hr_apv_bice" model="hr.apv">
+            <field name="codigo">106</field>
+            <field name="name">BICE VIDA COMPAÑIA DE SEGUROS S.A.</field>
+        </record>
+
+        <record id="hr_apv_chilena" model="hr.apv">
+            <field name="codigo">107</field>
+            <field name="name">CHILENA CONSOLIDADA SEGUROS DE VIDA S.A.</field>
+        </record>
+ 
+        <record id="hr_apv_cigna" model="hr.apv">
+            <field name="codigo">108</field>
+            <field name="name">CIGNA COMPAÑIA DE SEGUROS DE VIDA S.A.</field>
+        </record>
+
+        <record id="hr_apv_cnlife" model="hr.apv">
+            <field name="codigo">109</field>
+            <field name="name">CN LIFE, COMPAÑIA DE SEGUROS DE VIDA S.A.</field>
+        </record>
+
+        <record id="hr_apv_cardif" model="hr.apv">
+            <field name="codigo">110</field>
+            <field name="name">COMPAÑIA DE SEGUROS DE VIDA CARDIF S.A.</field>
+        </record>
+
+        <record id="hr_apv_conso" model="hr.apv">
+            <field name="codigo">111</field>
+            <field name="name">CIA DE SEG. DE VIDA CONSORCIO NACIONAL DE SEG S.A.</field>
+        </record>
+
+        <record id="hr_apv_huelen" model="hr.apv">
+            <field name="codigo">113</field>
+            <field name="name">COMPAÑIA DE SEGUROS DE VIDA HUELEN S.A.</field>
+        </record>
+
+        <record id="hr_apv_vitalis" model="hr.apv">
+            <field name="codigo">115</field>
+            <field name="name">COMPAÑIA DE SEGUROS DE VIDA VITALIS S.A.</field>
+        </record>
+
+        <record id="hr_apv_confuturo" model="hr.apv">
+            <field name="codigo">116</field>
+            <field name="name">COMPAÑIA DE SEGUROS CONFUTURO S.A.</field>
+        </record>
+
+        <record id="hr_apv_euro" model="hr.apv">
+            <field name="codigo">117</field>
+            <field name="name">EUROAMERICA SEGUROS DE VIDA S.A.</field>
+        </record>
+
+        <record id="hr_apv_sura" model="hr.apv">
+            <field name="codigo">118</field>
+            <field name="name">SEGUROS DE VIDA SURA S.A.</field>
+        </record>
+
+
+        <record id="hr_apv_metlife" model="hr.apv">
+            <field name="codigo">121</field>
+            <field name="name">METLIFE CHILE SEGUROS DE VIDA S.A</field>
+        </record>
+
+        <record id="hr_apv_mapfre" model="hr.apv">
+            <field name="codigo">123</field>
+            <field name="name">MAPFRE COMPAÑIA DE SEGUROS DE VIDA DE CHILE S.A.</field>
+        </record>
+
+        <record id="hr_apv_mutual" model="hr.apv">
+            <field name="codigo">125</field>
+            <field name="name">MUTUAL DE SEGUROS DE CHILE</field>
+        </record>
+
+        <record id="hr_apv_carabineros" model="hr.apv">
+            <field name="codigo">126</field>
+            <field name="name">MUTUALIDAD DE CARABINEROS</field>
+        </record>
+
+        <record id="hr_apv_ejercito" model="hr.apv">
+            <field name="codigo">127</field>
+            <field name="name">MUTUALIDAD DEL EJERCITO Y AVIACION</field>
+        </record>
+
+        <record id="hr_apv_ohio" model="hr.apv">
+            <field name="codigo">128</field>
+            <field name="name">OHIO NATIONAL SEGUROS DE VIDA S.A.</field>
+        </record>
+
+        <record id="hr_apv_principal" model="hr.apv">
+            <field name="codigo">129</field>
+            <field name="name">PRINCIPAL COMPAÑIA DE SEGUROS DE VIDA CHILE S.A.</field>
+        </record>
+                <record id="hr_apv_renta" model="hr.apv">
+            <field name="codigo">130</field>
+            <field name="name">RENTA NACIONAL COMPAÑIA DE SEGUROS DE VIDA S.A.</field>
+        </record>
+
+        <record id="hr_apv_security" model="hr.apv">
+            <field name="codigo">131</field>
+            <field name="name">SEGUROS DE VIDA SECURITY PREVISION S.A.</field>
+        </record>
+
+        <record id="hr_apv_penta" model="hr.apv">
+            <field name="codigo">134</field>
+            <field name="name">COMPAÑIA DE SEGUROS GENERALES PENTA-SECURITY S.A.</field>
+        </record>
+
+        <record id="hr_apv_pentavida" model="hr.apv">
+            <field name="codigo">135</field>
+            <field name="name">PENTA VIDA COMPAÑIA DE SEGUROS DE VIDA S.A.</field>
+        </record>
+
+        <record id="hr_apv_ace" model="hr.apv">
+            <field name="codigo">136</field>
+            <field name="name">ACE SEGUROS S.A.</field>
+        </record>
+
+<!-- TODO ADD
+201 BANDESARROLLO ADM. GENERAL DE FONDOS S.A.
+203 BBVA ASSET MANAGEMENT AGF S.A.
+204 BCI ASSET MANAGEMENT ADMINISTRADORA GENERAL DE FONDOS S.A.
+205 BICE INVERSIONES AGF S.A.
+208 BTG PACTUAL CHILE S.A. ADMINISTRADORA GENERAL DE FONDOS
+214 PRINCIPAL ADMINISTRADORA GENERAL DE FONDOS S.A.
+215 SANTANDER ASSET MANAGEMENT S.A. ADM. GENERAL DE FONDOS
+217 SCOTIA SUDAMERICANO ADMINISTRADORA DE FONDOS MUTUOS S.A.
+218 ADMINISTRADORA GENERAL DE FONDOS SECURITY S.A.
+224 ZURICH ADMINISTRADORA GENERAL DE FONDOS S.A.
+225 ITAU ADMINISTRADORA GENERAL DE FONDOS S.A.
+229 BANCOESTADO S.A. ADMINISTRADORA GENERAL DE FONDOS
+237 FINTUAL ADMINISTRADORA GENERAL DE FONDOS S.A
+600 ZURICH CHILE ASSET MANAGEMENT ADMINISTRADORA GENERAL DE FONDOS S.A
+601 LARRAIN VIAL ADMINISTRADORA GENERAL DE FONDOS S.A.
+Institución Autorizada APVI - APVC : Corredores de Bolsa
+213 LARRAIN VIAL S.A. CORREDORA DE BOLSA
+222 BANCHILE CORREDORES DE BOLSA S.A.
+227 CORREDORES DE BOLSA SURA S.A.
+228 BTG PACTUAL CHILE S.A. CORREDORES DE BOLSA
+231 SCOTIA SUD AMERICANO CORREDORES DE BOLSA S.A.
+232 BICE INVERSIONES CORREDORES DE BOLSA S.A.
+234 VALORES SECURITY S.A. CORREDORES DE BOLSA
+235 MBI CORREDORES DE BOLSA S.A.
+236 CONSORCIO CORREDORES DE BOLSA S.A. 
+-->
+
+    </data>
+</odoo>                     

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="action_salary_books" model="ir.actions.act_window">
+            <field name="name">Libro de Remuneraciones Haberes</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">hr.salary.employee.month</field>
+            <field name="view_mode">form</field>
+            <field name="target">new</field>
+        </record>
+
+
+	<menuitem id="menu_salary_books" name="Libro de Remuneraciones"
+		parent="hr_work_entry_contract_enterprise.menu_hr_payroll_configuration" sequence="70"
+        action="l10n_cl_hr.action_salary_books"
+		groups="hr_payroll.group_hr_payroll_user" />
+
+        <record id="view_salary_employee_month" model="ir.ui.view">
+            <field name="name">Libro de Remuneraciones</field>
+            <field name="model">hr.salary.employee.month</field>
+            <field name="arch" type="xml">
+            <form string="Libro de Remuneraciones">
+                <span class="o_form_label">Este wizard permite imprimir el total haberes</span>
+                    <footer>
+                        <button name="print_report" string="Print" type="object" class="oe_highlight"/>or
+                        <button string="Cancel" class="oe_link" special="cancel" />
+                    </footer>
+                    <group>
+                        <field name="end_date"/>
+                    </group>
+            </form>
+            </field>
+        </record>
+
+        <record id="report_paper_format_payroll" model="report.paperformat">
+            <field name="name">A4 Payroll</field>
+            <field name="default" eval="True"/>
+            <field name="format">A2</field>
+            <field name="orientation">Landscape</field>
+            <field name="margin_top">10</field>
+            <field name="margin_bottom">10</field>
+            <field name="margin_right">2</field>
+            <field name="margin_left">2</field>
+            <field name="header_spacing">10</field>
+            <field name="dpi">90</field>
+        </record>
+
+        <record id="hr_salary_books" model="ir.actions.report">
+            <field name="name">Libro de Remuneraciones</field>
+            <field name="model">hr.salary.employee.month</field>
+            <field name="report_type">qweb-pdf</field>
+            <field name="report_name">l10n_cl_hr.report_hrsalarybymonth</field>
+            <field name="report_file">l10n_cl_hr.report_hrsalarybymonth</field>
+            <field name="print_report_name">"Electronic Delivery Guide"</field>
+            <field name="paperformat_id" ref="l10n_cl_hr.report_paper_format_payroll"/>
+            <field name="binding_model_id" ref="l10n_cl_hr.model_hr_salary_employee_month"/>
+            <field name="binding_type">report</field>
+        </record>
+
+    </data>
+</odoo>

@@ -1,0 +1,26 @@
+{
+    "name": "Payroll Reports",
+    "version": "1.0.1",
+    "author": "Konos",
+    "website": "www.konos.cl",
+    "category": 'Localization',
+    "description": """  """,
+    "depends": [
+        'base',
+        'hr',
+        'account',
+        'l10n_cl_hr',
+    ],
+    "data": [
+        "data/sequence.xml",
+        "data/multicompany_rule.xml",
+        "security/ir.model.access.csv",
+        "reports/hr_affidavit_report.xml",
+        "reports/hr_bonus_certificate_report.xml",
+        "views/hr_affidavit_view.xml",
+        "views/hr_bonus_certificate_view.xml",
+        "views/res_company.xml",
+        "views/sworn_declaration_report.xml",
+    ],
+    "installable": True,
+}

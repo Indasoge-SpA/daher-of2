@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+<template id="report_leave_request_report_doc">
+	<t t-call="web.html_container">
+		<t t-call="l10n_cl_hr_leave_req_report.external_payslip_layout">
+			<t t-foreach="docs" t-as="doc">
+			<br/><br/><br/>
+			<div class="page">
+				<div style=" background-color: #fff; color:#000 !important; font:25px lucida-console,sans-serif !important;font-weight: bold;">
+					<t t-if="('draft' == doc.state)">
+						<strong><div name="payment_term" style="border: 0px solid black;"> <center> Holiday Request </center></div></strong>
+					</t>
+					<t t-if="('draft' != doc.state)">
+						<strong><div name="payment_term" style="border: 0px solid black;"> <center> Legal Leave Voucher </center></div></strong>
+					</t>
+				</div><br/>
+				<div class="row" style="border: 1px solid black; margin-right: 2px; margin-left: 2px; padding: 10px">
+					<div class="col-6 ">
+						<strong>Employee ID:</strong><br/>
+						<span t-if="doc.employee_id.identification_id"  t-field="doc.employee_id.identification_id" /><br t-if="doc.employee_id.identification_id"/>
+						<strong>Employee:</strong><br/>
+						<span t-field="doc.employee_id" /><br/>
+						<strong>Department:</strong><br/>
+						<span t-if="doc.employee_id.department_id"  t-field="doc.employee_id.department_id" /><br/>
+						<strong>Job Position:</strong><br/>
+						<span t-if="doc.employee_id.job_id"  t-field="doc.employee_id.job_id" /><br/>
+						<strong>Observations:</strong><br/>
+						<span t-if="doc.report_note"  t-field="doc.report_note" /><br/>
+	            	</div>
+					<div class="col-6 text-left">
+						<div name="date">
+							<div class="col-xs-4 pull-right">
+								<table class="table table-condensed">
+									<tr style="border-top: 3px solid white;">
+										<td><strong>Date:</strong></td>
+										<td>
+											<span t-esc="context_timestamp(datetime.datetime.now()).strftime('%Y-%m-%d')"/>
+										</td>
+									</tr>
+									<tr style="border-top: 3px solid white;">
+										<td><strong>Status:</strong></td>
+										<td >
+											<span t-field="doc.state"/>
+										</td>
+									</tr>
+									<tr style="border-top: 3px solid white;">
+										<td><strong>Vacations:</strong></td>
+										<td>
+											<div style="height:30px; width:30px; border: 3px solid black; text-align: center">X</div>
+										</td>
+									</tr>
+									<tr style="border-top: 3px solid white;">
+										<td><strong>Complete Day:</strong></td>
+										<td>
+											<div style="height:30px; width:30px; border: 3px solid black; text-align: center">X</div>
+										</td>
+									</tr>
+								</table>
+							</div>
+						</div>
+					</div>
+				</div><br/>
+				<table class="table table-borderless" style="margin-bottom: 0em">
+					<thead>
+						<tr>
+							<td colspan="2" style="border: 1px solid black; font:20px lucida-console,sans-serif !important;font-weight: bold; text-align: center">
+								LEGAL HOLIDAY REQUESTED / PERMISSION DAYS
+								<br></br>
+							</td>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td style="border-left: 1px solid black;">
+								<strong style="margin-right: 2.5em;">Since:</strong><span t-field="doc.request_date_from"/>
+							</td>
+							<td style="border-right: 1px solid black;">
+								<strong style="margin-right: 2.5em;">To:</strong><span t-field="doc.request_date_to"/>
+							</td>
+						</tr>
+						<tr>
+							<td colspan="2" style="border-left: 1px solid black; border-right: 1px solid black;">
+								<strong style="margin-right: 2.5em;">Days Number:</strong><span t-field="doc.number_of_days_display"/>
+							</td>
+						</tr>
+						<tr>
+							<td colspan="2" style="border-left: 1px solid black; border-right: 1px solid black;">
+								<strong style="margin-right: 2.5em;">Leave Request:</strong><span t-field="doc.holiday_status_id.name"/>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+				<table class="table table-borderless">
+					<thead>
+						<tr>
+							<td colspan="2" style="border: 1px solid black; font:20px lucida-console,sans-serif !important;font-weight: bold; text-align: center">
+								ADDITIONAL VACATIONS
+								<br></br>
+							</td>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td style="border-left: 1px solid black;">
+								<strong style="margin-right: 1.0em;">Since:</strong>
+								<ul style="display: inline;">
+								    <li style="display: inline-block; width: 30px; height: 30px; font-size: 20px; color: white; text-align: center; border: 1px solid black;">X</li>
+								    <li style="display: inline-block; width: 30px; height: 30px; font-size: 20px; color: white; text-align: center; border: 1px solid black;">X</li>
+								    <li style="display: inline-block; width: 30px; height: 30px; font-size: 20px; color: white; text-align: center; border: 1px solid black;">X</li>
+								    <li style="display: inline-block; width: 30px; height: 30px; font-size: 20px; color: white; text-align: center; border: 1px solid black;">X</li>
+								    <li style="display: inline-block; width: 30px; height: 30px; font-size: 20px; color: white; text-align: center; border: 1px solid black;">X</li>
+								    <li style="display: inline-block; width: 30px; height: 30px; font-size: 20px; color: white; text-align: center; border: 1px solid black;">X</li>
+								    <li style="display: inline-block; width: 30px; height: 30px; font-size: 20px; color: white; text-align: center; border: 1px solid black;">X</li>
+								    <li style="display: inline-block; width: 30px; height: 30px; font-size: 20px; color: white; text-align: center; border: 1px solid black;">X</li>
+								</ul>
+							</td>
+							<td style="border-right: 1px solid black;">
+								<strong style="margin-right: 1.0em;">To:</strong>
+								<ul style="display: inline;">
+								    <li style="display: inline-block; width: 30px; height: 30px; font-size: 20px; color: white; text-align: center; border: 1px solid black;">X</li>
+								    <li style="display: inline-block; width: 30px; height: 30px; font-size: 20px; color: white; text-align: center; border: 1px solid black;">X</li>
+								    <li style="display: inline-block; width: 30px; height: 30px; font-size: 20px; color: white; text-align: center; border: 1px solid black;">X</li>
+								    <li style="display: inline-block; width: 30px; height: 30px; font-size: 20px; color: white; text-align: center; border: 1px solid black;">X</li>
+								    <li style="display: inline-block; width: 30px; height: 30px; font-size: 20px; color: white; text-align: center; border: 1px solid black;">X</li>
+								    <li style="display: inline-block; width: 30px; height: 30px; font-size: 20px; color: white; text-align: center; border: 1px solid black;">X</li>
+								    <li style="display: inline-block; width: 30px; height: 30px; font-size: 20px; color: white; text-align: center; border: 1px solid black;">X</li>
+								    <li style="display: inline-block; width: 30px; height: 30px; font-size: 20px; color: white; text-align: center; border: 1px solid black;">X</li>
+								</ul>
+							</td>
+						</tr>
+						<tr>
+							<td colspan="2" style="border-left: 1px solid black; border-right: 1px solid black;">
+								<strong style="margin-right: 1.0em;">Days Number:</strong>
+								<ul style="display: inline;">
+								    <li style="display: inline-block; width: 30px; height: 30px; font-size: 20px; color: white; text-align: center; border: 1px solid black;">X</li>
+								    <li style="display: inline-block; width: 30px; height: 30px; font-size: 20px; color: white; text-align: center; border: 1px solid black;">X</li>
+								    <li style="display: inline-block; width: 30px; height: 30px; font-size: 20px; color: white; text-align: center; border: 1px solid black;">X</li>
+								</ul>
+							</td>
+						</tr>
+						<tr>
+							<td colspan="2" style="border-left: 1px solid black; border-bottom: 1px solid black; border-right: 1px solid black;">
+								<strong style="margin-right: 1.0em;">Available Period:</strong>
+								<ul style="display: inline;">
+								    <li style="display: inline-block; width: 30px; height: 30px; font-size: 20px; color: white; text-align: center; border: 1px solid black;">X</li>
+								    <li style="display: inline-block; width: 30px; height: 30px; font-size: 20px; color: white; text-align: center; border: 1px solid black;">X</li>
+								    <li style="display: inline-block; width: 30px; height: 30px; font-size: 20px; color: white; text-align: center; border: 1px solid black;">X</li>
+								    <li style="display: inline-block; width: 30px; height: 30px; font-size: 20px; color: white; text-align: center; border: 1px solid black;">X</li>
+								</ul>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+				<br/><br/>
+				<footer>
+					<table class="table table-condensed">
+						<tr>
+							<td>
+								<th class="text-left">Manager : <span t-field="doc.employee_id.parent_id"/> </th>
+							</td>
+							<td>
+								<th class="text-right">Signature : _______________</th>
+							</td>
+						</tr>
+					</table>
+				</footer>
+			</div>
+			</t>
+		</t>
+	</t>
+</template>
+
+<template id="report_leave_request_report">
+	<t t-call="web.html_container">
+		<t t-call="l10n_cl_hr_leave_req_report.report_leave_request_report_doc"/>
+	</t>
+</template>
+</odoo>

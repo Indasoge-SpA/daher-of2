@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<record id="hr_bonus_certificate_wizard_form_view"
+		model="ir.ui.view">
+		<field name="name">hr.bonus.certificate.wizard.form</field>
+		<field name="model">hr.bonus.certificate.wizard</field>
+		<field name="arch" type="xml">
+			<form string="Reporte sobre sueldos">
+				<group>
+					<h4>Por favor seleccione el año que desea extraer</h4>
+					<group>
+
+						<field name="year" options="{'datepicker': {'showType': 'years'}}" />
+					</group>
+				</group>
+
+				<footer>
+					<div class="oe_left">
+						<button string="Generar Reporte" name="action_print_report"
+							type="object" class="oe_highlight" />
+						<button string="Cerrar" special="cancel" type="object"
+							class="oe_link" />
+					</div>
+				</footer>
+			</form>
+		</field>
+	</record>
+
+	<record id="hr_bonus_certificate_wizard_action"
+		model="ir.actions.act_window">
+		<field name="name">Reporte sobre sueldos</field>
+		<field name="type">ir.actions.act_window</field>
+		<field name="res_model">hr.bonus.certificate.wizard</field>
+		<field name="view_type">form</field>
+		<field name="view_mode">tree,form</field>
+		<field name="view_id"
+			ref="hr_bonus_certificate_wizard_form_view" />
+		<field name="target">new</field>
+	</record>
+
+	<!--menuitem id="hr_bonus_certificate_wizard_menu" name="Reporte Sobre Sueldos" 
+		sequence="10" parent="l10n_cl_hr_payroll.hr_report_menu" action="hr_bonus_certificate_wizard_action" 
+		/ -->
+
+</odoo>

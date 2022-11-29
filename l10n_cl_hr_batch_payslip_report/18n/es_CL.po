@@ -1,0 +1,198 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* l10n_cl_hr_batch_payslip_report
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 15.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-03-19 17:57+0000\n"
+"PO-Revision-Date: 2022-03-19 14:57-0300\n"
+"Last-Translator: Nelson Ramírez  <nramirez@konos.cl>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"Language: es_CL\n"
+"X-Generator: Poedit 3.0\n"
+
+#. module: l10n_cl_hr_batch_payslip_report
+#: model_terms:ir.ui.view,arch_db:l10n_cl_hr_batch_payslip_report.wizard_batch_payslip_report_view_form
+#, fuzzy
+msgid "* Click button to print Batch Payslip Report."
+msgstr "* Haga clic en el botón para imprimir el Informe de Nómina por Lotes."
+
+#. module: l10n_cl_hr_batch_payslip_report
+#: model_terms:ir.ui.view,arch_db:l10n_cl_hr_batch_payslip_report.wizard_batch_payslip_report_view_form
+#, fuzzy
+msgid "Back"
+msgstr "Atrás"
+
+#. module: l10n_cl_hr_batch_payslip_report
+#: model_terms:ir.ui.view,arch_db:l10n_cl_hr_batch_payslip_report.report_batch_payslip_template
+#, fuzzy
+msgid "Batch :"
+msgstr "Usar pagos por lotes "
+
+#. module: l10n_cl_hr_batch_payslip_report
+#: model:ir.actions.report,name:l10n_cl_hr_batch_payslip_report.action_print_batch_payslip
+#, fuzzy
+msgid "Batch Payslip"
+msgstr "Nómina por lotes"
+
+#. module: l10n_cl_hr_batch_payslip_report
+#: model:ir.actions.act_window,name:l10n_cl_hr_batch_payslip_report.action_wizard_batch_payslip_report
+#, fuzzy
+msgid "Batch Payslip Report"
+msgstr "Informe de nóminas por lotes"
+
+#. module: l10n_cl_hr_batch_payslip_report
+#: model:ir.model.fields,field_description:l10n_cl_hr_batch_payslip_report.field_wizard_batch_payslip_report__batch_id
+#, fuzzy
+msgid "Batch Ref."
+msgstr "Ref. de lote"
+
+#. module: l10n_cl_hr_batch_payslip_report
+#: model_terms:ir.ui.view,arch_db:l10n_cl_hr_batch_payslip_report.wizard_batch_payslip_report_view_form
+#, fuzzy
+msgid "Close"
+msgstr "Cerrar"
+
+#. module: l10n_cl_hr_batch_payslip_report
+#: model:ir.model.fields,field_description:l10n_cl_hr_batch_payslip_report.field_wizard_batch_payslip_report__create_uid
+#, fuzzy
+msgid "Created by"
+msgstr "Creado por"
+
+#. module: l10n_cl_hr_batch_payslip_report
+#: model:ir.model.fields,field_description:l10n_cl_hr_batch_payslip_report.field_wizard_batch_payslip_report__create_date
+#, fuzzy
+msgid "Created on"
+msgstr "Creado en"
+
+#. module: l10n_cl_hr_batch_payslip_report
+#: model_terms:ir.ui.view,arch_db:l10n_cl_hr_batch_payslip_report.report_batch_payslip_template
+#, fuzzy
+msgid "Designation"
+msgstr "Designación"
+
+#. module: l10n_cl_hr_batch_payslip_report
+#: model:ir.model.fields,field_description:l10n_cl_hr_batch_payslip_report.field_wizard_batch_payslip_report__display_name
+#, fuzzy
+msgid "Display Name"
+msgstr "Mostrar nombre"
+
+#. module: l10n_cl_hr_batch_payslip_report
+#: model:ir.model.fields,field_description:l10n_cl_hr_batch_payslip_report.field_wizard_batch_payslip_report__xls_file
+#, fuzzy
+msgid "Download"
+msgstr "Descargar"
+
+#. module: l10n_cl_hr_batch_payslip_report
+#: model_terms:ir.ui.view,arch_db:l10n_cl_hr_batch_payslip_report.report_batch_payslip_template
+#, fuzzy
+msgid "Employee"
+msgstr "Empleado"
+
+#. module: l10n_cl_hr_batch_payslip_report
+#: model:ir.model.fields,field_description:l10n_cl_hr_batch_payslip_report.field_wizard_batch_payslip_report__name
+#, fuzzy
+msgid "File name"
+msgstr "Nombre del archivo"
+
+#. module: l10n_cl_hr_batch_payslip_report
+#: model:ir.model.fields,field_description:l10n_cl_hr_batch_payslip_report.field_wizard_batch_payslip_report__id
+#, fuzzy
+msgid "ID"
+msgstr "ID (identificación)"
+
+#. module: l10n_cl_hr_batch_payslip_report
+#: model:ir.model.fields,field_description:l10n_cl_hr_batch_payslip_report.field_wizard_batch_payslip_report____last_update
+#, fuzzy
+msgid "Last Modified on"
+msgstr "Última modificación el"
+
+#. module: l10n_cl_hr_batch_payslip_report
+#: model:ir.model.fields,field_description:l10n_cl_hr_batch_payslip_report.field_wizard_batch_payslip_report__write_uid
+#, fuzzy
+msgid "Last Updated by"
+msgstr "Última actualización de"
+
+#. module: l10n_cl_hr_batch_payslip_report
+#: model:ir.model.fields,field_description:l10n_cl_hr_batch_payslip_report.field_wizard_batch_payslip_report__write_date
+#, fuzzy
+msgid "Last Updated on"
+msgstr "Última actualización en"
+
+#. module: l10n_cl_hr_batch_payslip_report
+#: model_terms:ir.ui.view,arch_db:l10n_cl_hr_batch_payslip_report.report_batch_payslip_template
+#, fuzzy
+msgid "No #"
+msgstr "No"
+
+#. module: l10n_cl_hr_batch_payslip_report
+#: model_terms:ir.ui.view,arch_db:l10n_cl_hr_batch_payslip_report.report_batch_payslip_template
+#, fuzzy
+msgid "Payslip Ref"
+msgstr "Ref. Liquidación."
+
+#. module: l10n_cl_hr_batch_payslip_report
+#: model_terms:ir.ui.view,arch_db:l10n_cl_hr_batch_payslip_report.report_batch_payslip_template
+#, fuzzy
+msgid "Period :"
+msgstr "Período"
+
+#. module: l10n_cl_hr_batch_payslip_report
+#: model_terms:ir.ui.view,arch_db:l10n_cl_hr_batch_payslip_report.wizard_batch_payslip_report_view_form
+#, fuzzy
+msgid "Print Excel"
+msgstr "Imprimir Excel"
+
+#. module: l10n_cl_hr_batch_payslip_report
+#: model_terms:ir.ui.view,arch_db:l10n_cl_hr_batch_payslip_report.wizard_batch_payslip_report_view_form
+#, fuzzy
+msgid "Print PDF"
+msgstr "Imprimir PDF"
+
+#. module: l10n_cl_hr_batch_payslip_report
+#: model:ir.model.fields,field_description:l10n_cl_hr_batch_payslip_report.field_wizard_batch_payslip_report__state
+#, fuzzy
+msgid "Status"
+msgstr "Estado"
+
+#. module: l10n_cl_hr_batch_payslip_report
+#: model_terms:ir.ui.view,arch_db:l10n_cl_hr_batch_payslip_report.report_batch_payslip_template
+#, fuzzy
+msgid "Total"
+msgstr "Total"
+
+#. module: l10n_cl_hr_batch_payslip_report
+#: model:ir.model,name:l10n_cl_hr_batch_payslip_report.model_wizard_batch_payslip_report
+#, fuzzy
+msgid "Wizard Batch Payslip Report"
+msgstr "Asistente de Informe de Nómina por Lotes"
+
+#. module: l10n_cl_hr_batch_payslip_report
+#: model:ir.model.fields.selection,name:l10n_cl_hr_batch_payslip_report.selection__wizard_batch_payslip_report__state__choose
+#, fuzzy
+msgid "choose"
+msgstr "elija"
+
+#. module: l10n_cl_hr_batch_payslip_report
+#: model:ir.model.fields.selection,name:l10n_cl_hr_batch_payslip_report.selection__wizard_batch_payslip_report__state__download
+#, fuzzy
+msgid "download"
+msgstr "descargar"
+
+#. module: l10n_cl_hr_batch_payslip_report
+#: model_terms:ir.ui.view,arch_db:l10n_cl_hr_batch_payslip_report.wizard_batch_payslip_report_view_form
+#, fuzzy
+msgid "or"
+msgstr "o"
+
+#. module: l10n_cl_hr_batch_payslip_report
+#: model:ir.model,name:l10n_cl_hr_batch_payslip_report.model_report_l10n_cl_hr_batch_payslip_report_template
+#, fuzzy
+msgid "report.l10n_cl_hr_batch_payslip_report_template"
+msgstr "report.l10n_cl_hr_batch_payslip_report_template"
